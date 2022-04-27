@@ -1,18 +1,13 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap"
+    rel="stylesheet">
 <style>
-    * {
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
 
     body {
-        font: 400 16px helvetica, sans-serif;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        background: #fff;
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 80%;
     }
 
     /* responsive */
@@ -24,11 +19,17 @@
     }
 
     .character-space {
-        width: 80%;
+        font: 400 16px helvetica, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        width: 100%;
         height: 100%;
         margin: auto auto;
         display: flex;
         flex-flow: column wrap;
+        font-family: 'Oswald', sans-serif !important;
     }
 
     .image-container-ext {
@@ -60,14 +61,19 @@
         color: white;
         flex: 1;
         align-self: end;
-        margin-bottom: 1vh;
+        margin-bottom: 5%;
         margin-left: -10%;
         margin-right: 5%;
+        font-size: 2vw;
     }
 
     .character-text .name {
-        font-size: 2em;
+        font-size: 3vw;
         color: #76ffe5;
+    }
+    
+    .station-symbol {
+        width: 1em;
     }
 
     .character-background {
@@ -115,12 +121,13 @@
                 src="https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/Ela.svg">
             <p class="character-text">
                 <strong class="name">Ela Alanas of Altas-Minas</strong>
-                is a land-born, rust-water mutant solene from the
-                neglected outer system of Helio-Altas. A tragedy resulting in
-                her exile compelled her to join the
-                Soli fleet in the hopes of a second chance to save herself, and
-                her
-                dying-species from the evil she believes is consuming them…</p>
+                is a land-born, <i>rust-water</i> mutant solene from the
+                neglected outer system of Helio-Altas. When a tragedy results in
+                her exile, she enlists in the Soli fleet– Hoping for a second
+                chance to do good in her life, and for the chance at avenging
+                her dying-species by upending the tyranny she believes is
+                consuming them all…
+            </p>
         </div>
         <div class="character-background">
             <div class="slanted-div">
@@ -132,12 +139,15 @@
             <img class="char-image zak"
                 src="https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/Zak.svg">
             <p class="character-text">
-                <strong class="name">Zak Ilceaus-Zacel of Ismas</strong>
+                <strong class="name">Zak Ilceaus-Zacel of <img
+                        class="station-symbol"
+                        src="https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/IsmasBlue.svg"></strong>
                 is an out-of-bond, station born sel from the inner system
                 station of Breva. When a shocking revelation results in his
                 forced military recruitment, his life and self-perception are
                 flipped upside down. He must muster the will to save himself
-                from placement upon Exile's front-line, all while coming to
+                from placement upon <i>Exile's</i> front-line, all while coming
+                to
                 terms with what lies below the skin…</p>
         </div>
         <div class="character-background">
