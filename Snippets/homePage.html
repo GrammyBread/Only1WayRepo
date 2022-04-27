@@ -1,0 +1,119 @@
+<style>
+    * {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    body {
+        font: 400 16px helvetica, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* responsive */
+    @media only screen and (max-width : 720px) {
+
+        .slanted-div {
+            padding: 100px 0;
+        }
+    }
+
+    .character-space {
+        width: 80%;
+        height: 100%;
+        margin: auto auto;
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .image-container-ext {
+        flex: 1;
+        position: relative;
+    }
+
+    .image-container-int {
+        position: absolute;
+        max-width: 100%;
+        z-index: 9;
+        display: flex;
+    }
+
+    .char-image {
+        max-width: 50%;
+    }
+
+    .character-text {
+        color: white;
+        flex: 1;
+        align-self: end;
+        margin-bottom: 0;
+        margin-left: -10%;
+    }
+
+    .character-background {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* angled div */
+    .slanted-div {
+        position: relative;
+        padding: 15% 0;
+        margin-top: 10%;
+        background: transparent;
+        overflow: visible;
+        z-index: 1;
+        max-height: 100%;
+    }
+
+    /* where the magic happens */
+    .slanted-div:before,
+    .slanted-div:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: black;
+        z-index: -1;
+        top: 0;
+        transform-origin: left top;
+        transform: skewY(6deg);
+    }
+
+    /* displays the content inside, as these settings in the parent breaks the effect */
+    .slanted-div div {
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1.5;
+    }
+</style>
+<div class="character-space">
+    <div class="image-container-ext">
+        <div class="image-container-int">
+            <img class="char-image"
+                src="https://lh4.googleusercontent.com/TUvOaq7jwX7vdNUbYt9Ax-DZlc6rUziQyBV9SYwKZXxnAtpxvvRHILe6Qxl13-Clty1AsLigWoWmchrWuVMe7P4">
+            <p class="character-text">Ela Alanas of Altas-Minas is a female soli (solene). She is a land-born, rust-water mutant from the neglected outer system of Helio-Altas. Though young of age and full of potential, her difficult life compelled her to join the Soli fleet in hopes of gaining status, and a chance to save her dying-species from the evil she believes is consuming them…</p>
+        </div>
+        <div class="character-background">
+            <div class="slanted-div">
+            </div>
+        </div>
+    </div>    
+    <div class="image-container-ext">
+        <div class="image-container-int">
+            <img class="char-image"
+                src="https://lh3.googleusercontent.com/W23sFksaj72Druf2y71ZrRy7K5RztgGB7dGT5uLeNw1OLvEDx8IpLtRv8naQInNWeNFD2b9nBzZnJNP0M1S405w">
+            <p class="character-text">Zak Ilceaus-Zacel of Ismas is a male soli (sel). He is an out-of-bond, station born from the inner system station of Breva. When a shocking revelation results in his forced military recruitment, his life and self-perception are flipped upside down. He must muster the will to save himself from placement upon Exile's front-line, all while coming to terms with what lies below the skin…</p>
+        </div>
+        <div class="character-background">
+            <div class="slanted-div">
+            </div>
+        </div>
+    </div>
+</div>
