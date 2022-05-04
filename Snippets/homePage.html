@@ -32,6 +32,17 @@
         font-family: 'Oswald', sans-serif !important;
     }
 
+    .parallax {
+        background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-color: black;
+        border-radius: 50vw;
+        background-position-x: right;
+    }
+
     .image-container-ext {
         flex: 1;
         position: relative;
@@ -57,17 +68,56 @@
         margin-bottom: 10%;
     }
 
+    .zak.image-container-ext {
+        flex: 2;
+    }
+
+    .header div, .character-text {
+        color: white;        
+        font-size: 2vw;
+    }
+
+    .header, .bottom {
+        background: black;
+        position: relative;
+        padding: 1% 0;
+        overflow: visible;
+        z-index: 1;
+    }
+
+    .bottom:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        bottom: 0;
+        transform-origin: left top;
+        transform: skewY(3deg);
+    }
+
+    .header:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        bottom: 0;
+        transform-origin: left bottom;
+        transform: skewY(3deg);
+    }
+
     .character-text {
-        color: white;
         flex: 1;
         align-self: end;
         margin-bottom: 5%;
         margin-left: -10%;
         margin-right: 5%;
-        font-size: 2vw;
     }
 
-    .character-text .name {
+    .character-text .name, .header .prefix, .bottom .prefix {
         font-size: 3vw;
         color: #76ffe5;
     }
@@ -108,13 +158,28 @@
     }
 
     /* displays the content inside, as these settings in the parent breaks the effect */
-    .slanted-div div {
+    .slanted-div div, .header div, .bottom div {
         text-align: center;
         font-size: 1.5em;
         line-height: 1.5;
     }
+
+    .header div, .bottom div {
+        padding: 2vw;
+        font-size: 2vw;
+    }
 </style>
-<div class="character-space">
+<div class="character-space parallax">
+    <div class="header">
+        <div><strong class="prefix">In an Alternate Universe,</strong> humans
+            are one of six genetically manufactured beings which call the known
+            blob home. Amongst humans live the Risonoids, a grouping of three
+            human-like species (Soli, Terren, and Rison) which proceeded
+            Humanoids (Humans, Laerets, and Matiran). Once the known blobs
+            builders and protectors, the Risonoids are now nearly extinct due to
+            a genetic poisoning that their creators inflicted upon them.
+        </div>
+    </div>
     <div class="ela image-container-ext">
         <div class="image-container-int">
             <img class="char-image ela"
@@ -154,5 +219,12 @@
             <div class="slanted-div">
             </div>
         </div>
+    </div>
+    <div class="bottom">
+        <div><strong class="prefix">When these two beings from separate worlds</strong>
+            find themselves intertwined by an impossible recovery, they must
+            find a way to place their different values aside, and work together
+            to survive the monstrosities which lurk beyond the veil of their
+            soldered stories.</div>
     </div>
 </div>
