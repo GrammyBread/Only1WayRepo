@@ -6,8 +6,11 @@
 <style>
 
     body {
-        width: 90%;
-        height: 80%;
+        width: 95%;
+        max-width: 80vh;
+        height: 95%;
+        font: 400 min(1rem, 1.5vh) helvetica, sans-serif;
+        color: #ffff;
     }
 
     /* responsive */
@@ -19,9 +22,6 @@
     }
 
     .character-space {
-        font: 400 16px helvetica, sans-serif;
-        color: #fff;
-        margin: 0;
         padding: 0;
         background: #fff;
         width: 100%;
@@ -34,38 +34,32 @@
 
     .parallax {
         background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg);
-        background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: auto;
         background-color: black;
-        border-radius: 50vw;
         background-position-x: right;
     }
 
     .image-container-ext {
-        flex: 1;
         position: relative;
+        flex: 2;
+        margin-top: 2%;
     }
 
     .image-container-int {
         position: absolute;
+        top: -10%;
         max-width: 100%;
+        max-height: 100%;
         z-index: 9;
         display: flex;
     }
 
     .char-image {
+        max-height: 100%;
         max-width: 50%;
-    }
-
-    .zak .slanted-div {
-        margin-top: 20%;
-        padding: 20% 0;
-    }
-
-    .zak .character-text {
-        margin-bottom: 10%;
+        position: relative;
     }
 
     .zak.image-container-ext {
@@ -73,8 +67,7 @@
     }
 
     .header div, .character-text {
-        color: white;        
-        font-size: 2vw;
+        color: white;   
     }
 
     .header, .bottom {
@@ -83,6 +76,15 @@
         padding: 1% 0;
         overflow: visible;
         z-index: 1;
+        flex: 1;
+        max-height: 100%;
+        display: flex;
+    }
+
+    .bottom {
+        margin-top: 10%;
+        display: flex;
+        align-items: center;
     }
 
     .bottom:before {
@@ -93,7 +95,7 @@
         background: inherit;
         z-index: -1;
         bottom: 0;
-        transform-origin: left top;
+        transform-origin: right top;
         transform: skewY(3deg);
     }
 
@@ -112,13 +114,14 @@
     .character-text {
         flex: 1;
         align-self: end;
-        margin-bottom: 5%;
+        margin-bottom: -2%;
         margin-left: -10%;
         margin-right: 5%;
     }
+    
 
     .character-text .name, .header .prefix, .bottom .prefix {
-        font-size: 3vw;
+        font-size: min(2rem, 3vh);
         color: #76ffe5;
     }
     
@@ -126,8 +129,9 @@
         width: 1em;
     }
 
-    .character-background {
-        position: relative;
+    .character-background {    
+        position: absolute;
+        top: 0;
         height: 100%;
         width: 100%;
     }
@@ -136,11 +140,10 @@
     .slanted-div {
         position: relative;
         padding: 15% 0;
-        margin-top: 5%;
         background: transparent;
         overflow: visible;
         z-index: 1;
-        max-height: 100%;
+        max-height: 90%;
     }
 
     /* where the magic happens */
@@ -160,13 +163,11 @@
     /* displays the content inside, as these settings in the parent breaks the effect */
     .slanted-div div, .header div, .bottom div {
         text-align: center;
-        font-size: 1.5em;
         line-height: 1.5;
     }
 
     .header div, .bottom div {
         padding: 2vw;
-        font-size: 2vw;
     }
 </style>
 <div class="character-space parallax">
@@ -188,10 +189,12 @@
                 <strong class="name">Ela Alanas of Altas-Minas</strong>
                 is a land-born, <i>rust-water</i> mutant solene from the
                 neglected outer system of Helio-Altas. When a tragedy results in
-                her exile, she enlists in the Soli fleet– Hoping for a second
-                chance to do good in her life, and for the chance at avenging
-                her dying-species by upending the tyranny she believes is
-                consuming them all…
+                her exile, she enlists in the Soli fleet- Looking for a second
+                chance in life, she pushes herself to climb the ranks, in the
+                vain hope to surmount a tyranny which she believes is consuming
+                them all. But when she pushes herself too far, and her enemies
+                begin to overpower her, Ela must decide between the revenge that
+                has made her, and the prophecy which calls to her.
             </p>
         </div>
         <div class="character-background">
@@ -207,13 +210,14 @@
                 <strong class="name">Zak Ilceaus-Zacel of <img
                         class="station-symbol"
                         src="https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/IsmasBlue.svg"></strong>
-                is an out-of-bond, station born sel from the inner system
-                station of Breva. When a shocking revelation results in his
-                forced military recruitment, his life and self-perception are
-                flipped upside down. He must muster the will to save himself
-                from placement upon <i>Exile's</i> front-line, all while coming
-                to
-                terms with what lies below the skin…</p>
+                is an out-of-bond, station born sel from the wealthy inner
+                system station of Breva. When a shocking revelation results in
+                his forced military recruitment, his life is stolen, and his
+                identity unraveled. Confused and purposeless, Zak must find the
+                path to save himself from placement upon <i>Exile's</i> front-line, and
+                reclaim his future, all while coming to terms with what lies
+                below the skin…
+            </p>
         </div>
         <div class="character-background">
             <div class="slanted-div">
