@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com');
+@import url('https://fonts.gstatic.com');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');'
+
+.custom--home {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 0.5;
+    font: 400 min(1rem, 1.5vh) helvetica, sans-serif;
+    color: #ffff;
+}
+
+/* responsive */
+@media only screen and (max-width : 720px) {
+    .custom--slanted-div {
+        padding: 100px 0;
+    }
+}
+
+.custom--character-space {    
+    padding: 0;
+    background: #fff;
+    width: auto;
+    height: 100%;
+    margin: auto auto;
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    flex-flow: column wrap;
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.custom--parallax {
+    background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+.custom--image-container-ext {
+    position: relative;
+    flex: 2;
+    margin-top: 2%;
+}
+
+.custom--image-container-int {
+    top: -10%;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+}
+
+.custom--image-container-int.custom--zak {    
+    margin-top: -20%;
+    position: relative;
+}
+
+.custom--char-image {
+    max-height: 100%;
+    max-width: 40% !important;
+    position: relative;
+}
+
+.custom--zak.image-container-ext {
+    flex: 2;
+}
+
+.custom--header div, .custom--character-text {
+    color: white;   
+}
+
+.custom--header, .custom--bottom {
+    background: black;
+    position: relative;
+    padding: 1% 30% 1% 1%;
+    overflow: visible;
+    z-index: 1;
+    flex: 1;
+    max-height: 100%;
+    display: flex;
+}
+
+.custom--bottom {    
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.custom--bottom:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: right top;
+    transform: skewY(3deg);
+}
+
+.custom--header:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    bottom: 0;
+    transform-origin: left bottom;
+    transform: skewY(3deg);
+}
+
+.custom--character-text {
+    flex: 1;
+    align-self: end;
+    margin-bottom: -2%;
+    margin-left: -10%;
+    margin-right: 5%;
+}
+
+
+.custom--character-text .custom--name, .custom--header .custom--prefix, .custom--bottom .custom--prefix {
+    font-size: min(2rem, 3vh);
+    color: #76ffe5;
+}
+
+.custom--station-symbol {
+    width: 1em;
+}
+
+.custom--character-background {    
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* angled div */
+.custom--image-container-ext {
+    position: relative;
+    background: transparent;
+    overflow: visible;
+    z-index: 1;
+    margin: 12% 0%;
+}
+
+/* where the magic happens */
+.custom--image-container-ext:before,
+.custom--image-container-ext:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: black;
+    z-index: -1;
+    top: 0;
+    transform-origin: left top;
+    transform: skewY(6deg);
+}
+
+/* displays the content inside, as these settings in the parent breaks the effect */
+.custom--header div, .custom--bottom div {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.custom--header div, .custom--bottom div {
+    padding: 2vw;
+}
+
+.custom--banner {
+    width: 100%;
+    background-color: #39cdb3;
+    color: black;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    text-align: center;
+}
+
+.custom--patreon-btn {
+    background-color: #830303;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.custom--patreon-btn:hover {
+    text-decoration: underline;
+}
+
+.custom--signature--exterior-box {
+    align-items: baseline;
+    display: flex;
+
+}
+
+.custom--signature--copy {
+    color: black;
+    white-space: nowrap;
+    font-family: 'Oswald', sans-serif !important;
+    flex: 2;
+    font-size: .75rem;
+    position: relative;
+}
+
+.custom--socials {
+    font-family: 'Oswald', sans-serif !important;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 5px 0px 5px;
+    text-align: center;
+    padding-left: 10px;
+    font-size: 1rem;
+    grid-template-rows: 25% 50% 25%;
+    grid-template-columns: 50% 50%;
+    display: grid;
+    color: black;
+    background-color: #39cdb3;
+    max-width: inherit;
+    overflow: hidden;
+    max-height: 100%;
+    padding: 0.5rem;
+}
+
+.custom--socials-header {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    justify-self: center;
+    max-height: 100%;
+    margin-top: 1;
+    width: 15rem;
+    border-bottom: black;
+    border-width: 0px 0px 3px 0px;
+    border-style: solid;
+    height: 2rem;
+}
+
+.custom--social-links {    
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+    
+.custom--social-link-container {
+    background-color: #830303;
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+}
+
+.custom--socials strong {
+    font-size: 1.5rem;
+}
+
+.custom--signature {    
+    grid-column: 1;
+    grid-row: 3;
+    justify-self: flex-start;
+    display: flex;
+}
+
+.custom--signature-exterior-image
+{
+    grid-column: 3;
+    grid-row: 1;
+    flex: 1;
+    height: 100%
+}
+
+.custom--signature-image {
+    height: 100%;
+}
+
+.custom--fa-links {
+    color: white;
+}
+
+.custom--social-text {
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.custom--social-text:hover {
+    text-decoration: underline;
+}
+
+.custom--bottom-spacer {
+    height: 5rem;
+    background-color: black;
+}
