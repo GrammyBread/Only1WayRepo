@@ -1,3 +1,15 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/SiteBack.svg');
+}
+
 .parallax {
       /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -9,12 +21,42 @@
 
 .page__background {
   width: 100%;
-  background-attachment: fixed;
-  background-position: center;
+  height: 100%;
+}
+
+
+
+.background-image__2 {
+  background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg');
 }
 
 @media only screen and (max-device-width: 1366px) {
     .parallax {
       background-attachment: scroll;
     }
-  }
+}
+
+@media screen and (orientation:portrait) {
+  .background-image__1 {
+    background-attachment: inherit;
+    background-position: top;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 6;
+    width: 100%;
+    background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/TitleBackground.svg);
+    clip-path: polygon(64% 0, 100% 12%, 100% 100%, 45% 100%, 8% 75%, 0 0);
+  }  
+}
+
+
+@media screen and (orientation:landscape) {
+  .background-image__1 {
+    background-attachment: inherit;
+    background-position: top;
+    background-repeat: no-repeat;
+    aspect-ratio: 16 / 6;
+    width: 100%;
+    background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/TitleBackground.svg);
+    clip-path: polygon(64% 0, 100% 12%, 100% 100%, 45% 100%, 8% 75%, 0 0);
+  }  
+}
