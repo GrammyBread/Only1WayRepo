@@ -35,8 +35,9 @@
     background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
+    background-size: 60%;
+    background-color: transparent;
+    background-attachment: fixed;
 }
 
 .custom--image-container-ext {
