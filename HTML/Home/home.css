@@ -3,6 +3,7 @@ html, body {
 }
 
 body {
+  font-family: 'Oswald', sans-serif !important;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,10 +14,21 @@ body {
 .parallax {
       /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
+}
+
+.page__body {
+  flex: 1;
+  overflow: overlay;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+.page__body::-webkit-scrollbar {
+  display: none;
 }
 
 .page__background {
@@ -24,15 +36,62 @@ body {
   height: 100%;
 }
 
+.page__header-shadow {
+  background: linear-gradient(90deg, white, bisque, orange, red);
+  z-index: -999;
+  height: 100%;
+  width: 100%;
+  filter: blur(30px);
+  position: absolute;
+  top: -4px;
+  left: 49px;
+  clip-path: polygon(6% 16%, 100% 0%, 98% 75%, 0% 100%);
+}
 
+.page__header-title {
+  background: rgb(0, 0, 0);
+  color: #39cdb3;
+  font-size: 4rem;
+  height: 90%;
+  z-index: 999;
+  width: 90%;
+  position: relative;
+  padding: 1rem;
+  text-align: center;
+  margin-left: 8%;
+  font-weight: bolder;
+  clip-path: polygon(6% 16%, 100% 0%, 98% 75%, 0% 100%);
+}
+
+.page__header {
+  height: 8rem;
+  width: 45rem;
+  position: relative;
+}
+
+.background-image__1 {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .background-image__2 {
   background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg');
 }
 
+.background-image__3 {
+  background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/DetailsBackground.svg');
+}
+
 @media only screen and (max-device-width: 1366px) {
     .parallax {
       background-attachment: scroll;
+      background-position: top;
+    }
+    .page__header-title {      
+      font-size: 3rem;
+      padding-top: 1.25rem;
     }
 }
 
@@ -41,11 +100,20 @@ body {
     background-attachment: inherit;
     background-position: top;
     background-repeat: no-repeat;
-    aspect-ratio: 16 / 6;
+    aspect-ratio: 8 / 12;
     width: 100%;
-    background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/TitleBackground.svg);
-    clip-path: polygon(64% 0, 100% 12%, 100% 100%, 45% 100%, 8% 75%, 0 0);
-  }  
+    background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HeaderPortrait.svg);
+    clip-path: polygon(53% 0, 96% 28%, 100% 100%, 56% 100%, 3% 63%, 0 0);
+  }
+  
+  .page__header-title {
+    font-size: 2rem;
+    padding-left: 1.5rem;
+  }
+
+  .page__header {
+      margin-top: 2rem;
+  }
 }
 
 
@@ -54,9 +122,9 @@ body {
     background-attachment: inherit;
     background-position: top;
     background-repeat: no-repeat;
-    aspect-ratio: 16 / 6;
+    aspect-ratio: 15 / 6;
     width: 100%;
     background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/TitleBackground.svg);
     clip-path: polygon(64% 0, 100% 12%, 100% 100%, 45% 100%, 8% 75%, 0 0);
-  }  
+  } 
 }
