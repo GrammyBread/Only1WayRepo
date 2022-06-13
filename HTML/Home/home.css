@@ -58,7 +58,7 @@ body {
   padding: 3rem;
   margin-left: 2%;
   text-align: center;
-  font-weight: bolder;
+  font-weight: 700;
   clip-path: polygon(6% 16%, 100% 0%, 98% 75%, 0% 100%);
 }
 
@@ -68,13 +68,21 @@ body {
   position: relative;
 }
 
-.page__details {  
+.page__details, .story__details {  
   min-height: 100%;
   margin-bottom: 30px;
   position: relative;
 }
 
-.page__details-text {
+.page__details h3 {
+  font-weight: 200 !important;
+}
+
+.page__details h2 {
+  font-weight: 400 !important;
+}
+
+.page__details-text, .story__details-text {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -84,13 +92,20 @@ body {
   color: white;
 }
 
-.page__details-background {
+.page__details-background, .story__details-background {
   height: 100%;
   position: absolute;
   width: 100%;
   top: 0;
   z-index: -999;
+}
+
+.page__details-background {
   clip-path: polygon(5% 4%, 92% 0, 100% 46%, 86% 100%, 24% 100%, 0 75%);
+}
+
+.story__details-background {
+  clip-path: polygon(6% 0, 82% 9%, 100% 49%, 98% 100%, 5% 91%, 18% 57%);
 }
 
 .background-image__1 {
@@ -103,6 +118,8 @@ body {
 }
 
 .background-image__2 {
+  background-position-x: center;
+  background-position-y: 20%;
   background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg');
 }
 
@@ -112,22 +129,17 @@ body {
   background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/DetailsBackground.svg');
 }
 
-.details-text__Q1 {
+.details-text__Q {
   background: black;
   text-align: center;
   flex: 1 1 0%;
-  clip-path: polygon(15% 0px, 80% 0px, 91% 100%, 13% 79%);
   margin-right: -5%;
   margin-top: 12%;
   height: fit-content;
   padding: 2rem 3rem;
 }
 
-.details-text__Q1 h2 {  
-  font-weight: bolder;
-}
-
-.details-text__A1 {
+.details-text__A {
   flex: 2;
   font-size: 1.75rem;
   background: white;
@@ -136,13 +148,141 @@ body {
   margin-top: 15%;
   margin-left: -10%;
   z-index: -1;
+  font-weight: 200 !important;
+}
+
+.Q_1 {
+  clip-path: polygon(15% 0px, 80% 0px, 91% 100%, 13% 79%);
+}
+
+.Q_2 {
+  clip-path: polygon(12% 0px, 88% 0px, 96% 100%, 7% 80%);
+}
+
+.A_1 {
   clip-path: polygon(0 0, 94% 5%, 93% 81%, 5% 100%);
+}
+
+.A_2 {
+  clip-path: polygon(9% 0, 95% 3%, 100% 81%, 0 92%);
 }
 
 .text__strong {
   color: #39cdb3;
-  text-decoration: underline;
+  font-weight: 700 !important;
 }
+
+.text__min {  
+  margin-left: 3%;
+}
+
+.link__strong {
+  color: #39cdb3;
+  text-decoration: underline;
+  font-weight: 700 !important;
+}
+
+.story__header {  
+  flex: 1;
+  padding: 1% 20% 5% 5%;
+  background: black;
+  clip-path: polygon(0 0, 100% 0, 77% 100%, 0 79%);
+}
+
+.story__details {
+  height: 300%;
+  width: 100%;
+}
+
+.story__details h3 {
+  font-weight: 200 !important;
+  margin-left: 3%;
+}
+
+.story__details h2 {
+  font-weight: 700 !important;
+}
+
+.story__details-text {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 10% 40% 40% 10%;
+}
+
+.story__header {
+  grid-column: 1;
+  grid-row: 1;
+  height: 100%;
+  width: 100%
+}
+
+.story__character-block {  
+  position: relative;
+  height: 100%;
+  width: 100%
+}
+
+.story__character-background {  
+  background-color: black;
+  padding: 5% 5% 5% 40%;
+  height: 60%;
+  position: absolute;
+  bottom: 15%;
+  flex-flow: column;
+  justify-content: center;
+  display: flex;
+  clip-path: polygon(0px 0px, 100% 22%, 100% 100%, 0px 88%);
+  z-index: -500;
+}
+
+.story__image-container {
+  position: absolute;
+  z-index: 999;
+}
+
+.ela {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.zak {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.ela .story__image-container {
+  position: absolute;
+  z-index: 999;
+  top: 10%;
+  width: 50%;
+}
+
+.zak .story__image-container {
+  position: absolute;
+  z-index: 999;
+  top: -15%;
+  width: 40%;
+}
+
+.story__bottom {
+  grid-column: 1;
+  grid-row: 4;
+  background: black;
+  padding: 7% 5% 1% 10%;
+  clip-path: polygon(11% 19%, 100% 41%, 100% 100%, 0 100%);
+}
+
+.story__char-image {
+  width: 100%;
+  height: 100%;
+}
+
+.station-symbol {
+  height: 3rem;
+}
+
 
 @media only screen and (max-device-width: 1366px) {
     .parallax {
@@ -156,7 +296,7 @@ body {
 }
 
 @media only screen and (max-device-width: 1300px) {
-  .details-text__Q1 {
+  .details-text__Q {
     margin-top: 10%;
   }
 }
@@ -203,11 +343,11 @@ body {
     flex-flow: column wrap;
   }
 
-  .details-text__Q1 {
+  .details-text__Q {
     margin-bottom: 0%;
   }
 
-  .details-text__A1 {
+  .details-text__A {
     margin-left: 0%;
     margin-top: -3rem;
   }

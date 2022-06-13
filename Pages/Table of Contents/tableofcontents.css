@@ -110,8 +110,9 @@ table th {
 
 .c9 {
     background-color: black;
-    max-width: 468pt;
-    padding: 4.5pt 72pt 72pt 72pt
+    padding: 4.5pt 72pt 72pt 72pt;
+    height: 100%;
+    width: 100%;
 }
 
 .c4 {
