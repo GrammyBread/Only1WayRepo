@@ -38,13 +38,12 @@ body {
 
 .page__header-shadow {
   background: linear-gradient(90deg, white, bisque, orange, red);
-  z-index: -999;
+  z-index: -800;
   height: 100%;
   width: 100%;
   filter: blur(30px);
   position: absolute;
-  top: -4px;
-  left: 49px;
+  top: -5%;
   clip-path: polygon(6% 16%, 100% 0%, 98% 75%, 0% 100%);
 }
 
@@ -56,22 +55,49 @@ body {
   z-index: 999;
   width: 90%;
   position: relative;
-  padding: 1rem;
+  padding: 3rem;
+  margin-left: 2%;
   text-align: center;
-  margin-left: 8%;
   font-weight: bolder;
   clip-path: polygon(6% 16%, 100% 0%, 98% 75%, 0% 100%);
 }
 
 .page__header {
-  height: 8rem;
-  width: 45rem;
+  height: fit-content;
+  width: fit-content;
   position: relative;
 }
 
-.background-image__1 {
-  margin-bottom: 10px;
+.page__details {  
+  min-height: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.page__details-text {
   display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: 90%;
+  margin-top: 10%;
+  z-index: 999;
+  color: white;
+}
+
+.page__details-background {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -999;
+  clip-path: polygon(5% 4%, 92% 0, 100% 46%, 86% 100%, 24% 100%, 0 75%);
+}
+
+.background-image__1 {
+  height: 70%;
+  display: flex;
+  position: relative;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
@@ -80,8 +106,42 @@ body {
   background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg');
 }
 
-.background-image__3 {
+.background-image__3 {  
+  background-position-x: center;
+  background-position-y: 30%;
   background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/DetailsBackground.svg');
+}
+
+.details-text__Q1 {
+  background: black;
+  text-align: center;
+  flex: 1 1 0%;
+  clip-path: polygon(15% 0px, 80% 0px, 91% 100%, 13% 79%);
+  margin-right: -5%;
+  margin-top: 12%;
+  height: fit-content;
+  padding: 2rem 3rem;
+}
+
+.details-text__Q1 h2 {  
+  font-weight: bolder;
+}
+
+.details-text__A1 {
+  flex: 2;
+  font-size: 1.75rem;
+  background: white;
+  color: black;
+  padding: 6rem;
+  margin-top: 15%;
+  margin-left: -10%;
+  z-index: -1;
+  clip-path: polygon(0 0, 94% 5%, 93% 81%, 5% 100%);
+}
+
+.text__strong {
+  color: #39cdb3;
+  text-decoration: underline;
 }
 
 @media only screen and (max-device-width: 1366px) {
@@ -95,15 +155,39 @@ body {
     }
 }
 
+@media only screen and (max-device-width: 1300px) {
+  .details-text__Q1 {
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-device-width: 700px) {
+    .page__header-title {
+      font-size: 2rem;
+    }
+}
+
 @media screen and (orientation:portrait) {
-  .background-image__1 {
+  .logo__portrait {
     background-attachment: inherit;
     background-position: top;
     background-repeat: no-repeat;
     aspect-ratio: 8 / 12;
     width: 100%;
-    background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HeaderPortrait.svg);
+    background-image: url();
     clip-path: polygon(53% 0, 96% 28%, 100% 100%, 56% 100%, 3% 63%, 0 0);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: -999;
+  }
+
+  .background-image__1 {
+    height: 100%;
+  }
+  
+  .logo__landscape {
+    display: none;
   }
   
   .page__header-title {
@@ -114,17 +198,36 @@ body {
   .page__header {
       margin-top: 2rem;
   }
+
+  .page__details-text {
+    flex-flow: column wrap;
+  }
+
+  .details-text__Q1 {
+    margin-bottom: 0%;
+  }
+
+  .details-text__A1 {
+    margin-left: 0%;
+    margin-top: -3rem;
+  }
 }
 
 
 @media screen and (orientation:landscape) {
-  .background-image__1 {
+  .logo__landscape {
     background-attachment: inherit;
     background-position: top;
     background-repeat: no-repeat;
     aspect-ratio: 15 / 6;
     width: 100%;
-    background-image: url(https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/TitleBackground.svg);
+    background-image: url();
     clip-path: polygon(64% 0, 100% 12%, 100% 100%, 45% 100%, 8% 75%, 0 0);
+    position: absolute;
+    top: 0;
+    z-index: -999;
   } 
+  .logo__portrait {
+    display: none;
+  }
 }
