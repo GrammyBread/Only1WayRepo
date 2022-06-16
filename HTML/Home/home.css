@@ -111,7 +111,9 @@ body {
 }
 
 .background-image__1 {
-  height: 70%;
+  height: auto;
+  width: 100%;
+  aspect-ratio: 15 / 6;
   display: flex;
   position: relative;
   flex-flow: column wrap;
@@ -289,6 +291,89 @@ body {
 
 .station-symbol {
   height: 3rem;
+}
+
+.actions__container {  
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background-color: #39cdb3;
+  border-color: #39cdb3;
+  color: black;
+  font-size: 2rem;
+}
+
+.btn-secondary {
+  background-color: white;
+  border-color: white;
+  color: black;
+  font-size: 2rem;
+}
+
+.action__read-ahead, .action__read-current, .action__read-lore {
+    flex: 1 1 0%;
+    position: relative;
+    margin: 0% 5% 0% 5%;
+}
+
+.action__read-lore {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.lore__image-container {
+  flex: 2 1 0%;
+  height: fit-content;
+  width: fit-content;
+}
+
+.lore__image {
+  vertical-align: middle;
+  width: 25vw;
+  max-width: 20rem;
+}
+
+.lore__button {
+  flex: 1;
+  align-self: stretch;
+}
+
+.action__read-ahead {  
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  justify-items: center;
+  max-width: 25vw;
+}
+
+.read-ahead__background {
+  clip-path: polygon(0px 42%, 57% 18%, 100% 33%, 93% 100%, 55% 90%, 14% 100%);
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  z-index: -500;
+}
+
+.action__read-ahead h3 {
+  background: white;
+  padding: 1rem;
+  clip-path: polygon(9% 0, 100% 16%, 95% 100%, 0 92%, 0% 38%);
+  text-align: center;
+}
+
+.read-ahead__patreon-widge {
+  line-height: 0;
+  flex: 1;
+  max-width: 10rem;
 }
 
 
