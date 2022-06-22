@@ -815,11 +815,11 @@ MEDIA OVERRIDES
   }
 }
 
-@media only screen and (max-device-height: 900px) {  
+@media only screen and (max-device-height: 800px) {  
   .socials__header {
     display: none;
   }
-  
+
   .container__main-socials {
     border-top: none;
   }
