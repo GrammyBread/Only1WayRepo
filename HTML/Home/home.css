@@ -293,7 +293,7 @@ FOOTER SECTION
 */
 .footer {
   background: black;
-  z-index: -599;
+  z-index: 300;
 }
 
 .footer__container {
@@ -302,7 +302,7 @@ FOOTER SECTION
   height: 100%;
   width: 100%;
   background: #1e1d1d;
-  z-index: -500;
+  z-index: 200;
 }
 
 .container__symbol {
