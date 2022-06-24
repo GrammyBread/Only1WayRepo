@@ -118,7 +118,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/SiteBack.svg');
+  background-image: url('https://gitcdn.link/cdn/GrammyBread/Only1WayRepo/main/Assets/Site/SiteBack.svg');
 }
 
 .gimme-some-air {
@@ -144,13 +144,13 @@ BACKGROUND IMAGES
 .background-image__2 {
   background-position-x: center;
   background-position-y: 20%;
-  background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg');
+  background-image: url('https://gitcdn.link/cdn/GrammyBread/Only1WayRepo/main/Assets/Site/HomeBackground.svg');
 }
 
 .background-image__3 {
   background-position-x: center;
   background-position-y: 30%;
-  background-image: url('https://raw.githubusercontent.com/GrammyBread/Only1WayRepo/main/Assets/Site/DetailsBackground.svg');
+  background-image: url('https://gitcdn.link/cdn/GrammyBread/Only1WayRepo/main/Assets/Site/DetailsBackground.svg');
 }
 
 .parallax {
