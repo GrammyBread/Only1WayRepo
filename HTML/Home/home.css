@@ -912,13 +912,19 @@ MEDIA OVERRIDES
   }
 }
 
-@media screen and (max-height: 700px) and (orientation:landscape) {
+@media screen and (max-height: 725px) and (orientation:landscape) {
   .socials__header {
       display: none;
   }
 
   .container__main-socials {
       border-top: none;
+  }
+}
+
+@media screen and (max-height: 500px) and (orientation:landscape) {
+  .footer {
+    height: 30%;
   }
 }
 
