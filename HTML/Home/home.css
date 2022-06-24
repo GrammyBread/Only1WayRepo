@@ -121,6 +121,13 @@ body {
   background-image: url('https://gitcdn.link/cdn/GrammyBread/Only1WayRepo/main/Assets/Site/SiteBack.svg');
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .gimme-some-air {
   height: 4rem;
 }
