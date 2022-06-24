@@ -603,6 +603,7 @@ STORY & HEADER SECTIONS
   flex: 1;
   align-self: baseline;
   max-height: 100vh;
+  max-width: 100%;
 }
 
 .story__character-text {
@@ -628,6 +629,7 @@ STORY & HEADER SECTIONS
 .story__char-image {
   width: auto;
   height: 100%;
+  max-width: 100%;
 }
 
 .station-symbol {
@@ -906,6 +908,7 @@ MEDIA OVERRIDES
       flex-flow: column;
       place-content: center flex-start;
       align-items: center;
+      max-width: 100%;
   }
 
   .story__character-text {
