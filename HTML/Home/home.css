@@ -749,11 +749,13 @@ MEDIA OVERRIDES
   .actions__container-portrait .action__read-current {
       flex: 1;
       padding: 1rem 3rem;
+      max-height: fit-content;
   }
 
   .actions__container-portrait .action__read-ahead {
       flex: 1;
       width: 90%;
+      max-height: fit-content;
   }
 
   .actions__container-portrait .action__read-lore {
