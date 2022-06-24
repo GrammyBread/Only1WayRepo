@@ -506,6 +506,7 @@ STORY & HEADER SECTIONS
   min-height: 100%;
   margin-bottom: 30px;
   position: relative;
+  height: fit-content;
 }
 
   .page__details h3 {
@@ -688,7 +689,7 @@ MEDIA OVERRIDES
   }
 }
 
-@media only screen and (max-device-width: 700px) {
+@media only screen and (max-width: 750px) {
   h1 {
       font-size: 2rem;
   }
@@ -745,10 +746,15 @@ MEDIA OVERRIDES
       width: 50%;
       flex: 1;
   }
+  .actions__container-portrait .lore__button {
+    position: absolute;
+    width: 150%;
+    max-width: 100vw;
+  }
 }
 
 
-@media only screen and (max-device-height: 700px) and (max-device-width: 1050px) {
+@media only screen and (max-height: 700px) and (max-width: 1050px) {
   .signature__ARB {
       display: none;
   }
@@ -762,8 +768,7 @@ MEDIA OVERRIDES
   }
 }
 
-
-@media screen and (orientation:portrait) and (max-device-width: 500px) {
+@media screen and (orientation:portrait) and (max-width: 750px) {
   .container__symbol {
       display: none;
   }
@@ -781,7 +786,7 @@ MEDIA OVERRIDES
   }
 }
 
-@media only screen and (max-device-width: 450px) {
+@media only screen and (max-width: 550px) {
   h3 {
       font-size: 1rem;
   }
@@ -881,7 +886,7 @@ MEDIA OVERRIDES
   }
 
   .page__details-text {
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
   }
 
   .story__character-block {
